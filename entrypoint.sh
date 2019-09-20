@@ -33,4 +33,4 @@ if [ -z "$AZURE_SUBSCRIPTION_ID" ]; then
 fi
 
 # Upload source to storage
-az storage blob upload-batch -s ${SOURCE_DIR} -d ${DESTINATION_DIR} --account-name ${AZURE_STORAGE_ACCOUNT_NAME} --account-key ${AZURE_STORAGE_ACCOUNT_KEY} --connection-string ${AZURE_CONNECTION_STRING} ----subscription ${AZURE_SUBSCRIPTION_ID}
+az storage blob upload-batch -s ${SOURCE_DIR} -d ${DESTINATION_DIR} --account-name ${AZURE_STORAGE_ACCOUNT_NAME} --account-key ${AZURE_STORAGE_ACCOUNT_KEY} --connection-string ${AZURE_CONNECTION_STRING} --subscription ${AZURE_SUBSCRIPTION_ID}
