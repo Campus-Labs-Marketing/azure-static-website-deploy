@@ -11,17 +11,17 @@ inputs:
   DESTINATION_DIR:
     description: "The name of the blob container you want to upload to"
     required: true
-  AZURE_SECRET:
-    description: "Your Azure Secret"
-    required: true
-  AZURE_SUBSCRIPTION_ID:
-    description: "Your Azure Subscription ID"
-    required: true
   AZURE_STORAGE_ACCOUNT_NAME:
     description: "Your Azure Storage Account Name"
     required: true
   AZURE_STORAGE_ACCOUNT_KEY:
     description: "Your Azure Storage Account Key"
+    required: true
+  AZURE_CONNECTION_STRING:
+    description: "Your Azure Storage Account Connection String"
+    required: true
+  AZURE_SUBSCRIPTION_ID:
+    description: "Your Azure Subscription ID"
     required: true
 outputs:
 runs:
@@ -30,7 +30,7 @@ runs:
   args:
     - ${{ inputs.SOURCE_DIR }}
     - ${{ inputs.DESTINATION_DIR }}
-    - ${{ inputs.AZURE_SECRET }}
-    - ${{ inputs.AZURE_SUBSCRIPTION_ID }}
     - ${{ inputs.AZURE_STORAGE_ACCOUNT_NAME }}
     - ${{ inputs.AZURE_STORAGE_ACCOUNT_KEY }}
+    - ${{ inputs.AZURE_CONNECTION_STRING }}
+    - ${{ inputs.AZURE_SUBSCRIPTION_ID }}

@@ -23,10 +23,10 @@ jobs:
         env:
           SOURCE_DIR: "./public"
         	DESTINATION_DIR: "<blob-container>"
-          AZURE_SECRET: "<azure-secret>"
-          AZURE_SUBSCRIPTION_ID: "<azure-subscription-id>"
           AZURE_STORAGE_ACCOUNT_NAME: "<azure-storage-account-name>"
           AZURE_STORAGE_ACCOUNT_KEY: "<azure-storage-account-key>"
+          AZURE_CONNECTION_STRING: "<azure-connection-string>"
+          AZURE_SUBSCRIPTION_ID: "<azure-subscription-id>"
 ```
 ### Required Variables
 
@@ -34,10 +34,10 @@ jobs:
 | ------------- | ------------- | ------------- | ------------- |
 | `SOURCE_DIR` | The name of the directory you want to upload | `env` | **Yes** |
 | `DESTINATION_DIR` | The name of the blob container you want to upload to | `env` | **Yes** |
-| `AZURE_SECRET` | Your Azure Secret. | `secret` | **Yes** |
-| `AZURE_SUBSCRIPTION_ID` | Your Azure Subscription ID. | `secret` | **Yes** |
 | `AZURE_STORAGE_ACCOUNT_NAME` | Your Azure Storage Account Name. | `secret` | **Yes** |
 | `AZURE_STORAGE_ACCOUNT_KEY` | Your Azure Storage Account Key. | `secret` | **Yes** |
+| `AZURE_CONNECTION_STRING` | Your Azure Storage Account Connection String. | `secret` | **Yes** |
+| `AZURE_SUBSCRIPTION_ID` | Your Azure Subscription ID. | `secret` | **Yes** |
 
 ## License
 
