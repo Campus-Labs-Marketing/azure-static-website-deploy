@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: rmilstrey/azure-static-website-deploy@master
+      - uses: orgsync/azure-static-website-deploy@master
         env:
           SOURCE_DIR: "./public"
         	DESTINATION_DIR: "<blob-container>"
