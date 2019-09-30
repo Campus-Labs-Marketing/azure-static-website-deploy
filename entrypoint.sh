@@ -34,6 +34,7 @@ fi
 
 REPLACEMENT="assets"
 DESTINATION_DIR_FORMATTED=${DESTINATION_DIR/refs\/heads/$REPLACEMENT}
+DESTINATION_DIR_FORMATTED=${DESTINATION_DIR_FORMATTED/assets\/master/$REPLACEMENT}
 
 # Upload source to storage
 az storage blob upload-batch -s ${SOURCE_DIR} -d ${DESTINATION_DIR_FORMATTED} --account-name ${AZURE_STORAGE_ACCOUNT_NAME} --account-key ${AZURE_STORAGE_ACCOUNT_KEY} --connection-string ${AZURE_CONNECTION_STRING} --subscription ${AZURE_SUBSCRIPTION_ID}
